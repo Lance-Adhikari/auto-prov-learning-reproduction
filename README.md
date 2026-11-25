@@ -1,6 +1,6 @@
 # Auto-Prov Learning and Reproduction
 
-A staged exploration of Auto-Prov, a framework for turning system logs into provenance graphs and interpreting suspicious activity. This project currently contains architecture notes and NumPy examples for comparing and sampling vectors. It is not a full reproduction of the research system.
+A staged exploration of Auto-Prov, a framework for turning system logs into provenance graphs and interpreting suspicious activity. This project currently contains architecture notes and NumPy examples for comparing, sampling, and clustering vectors. It is not a full reproduction of the research system.
 
 ## Contents
 
@@ -10,7 +10,9 @@ A staged exploration of Auto-Prov, a framework for turning system logs into prov
 
 - [Greedy Farthest Point sampling](stage_02_log_clustering/greedy_farthest_point.py): Selects diverse vectors using their nearest cosine distance to the selected set. See the [sampling notes](stage_02_log_clustering/notes_stage_02b.md).
 
-The vectors are synthetic, not real log embeddings. RoBERTa encoding, clustering, and threat detection are not implemented yet. The next planned step is streaming log clustering.
+- [Simplified streaming clustering](stage_02_log_clustering/streaming_clustering.py): Groups incoming vectors by distance to cluster centers. Includes a [threshold experiment](stage_02_log_clustering/threshold_experiment_results.md).
+
+The vectors are synthetic, not real log embeddings. The clustering example is not DBStream. RoBERTa encoding and threat detection are not implemented. The next planned stage is the Candidate Provenance Extractor (CPE).
 
 ## Run
 
@@ -20,6 +22,8 @@ Requires Python 3.9 or later. From the project folder:
 python -m pip install -r requirements.txt
 python stage_02_log_clustering/embeddings_cosine_similarity.py
 python stage_02_log_clustering/greedy_farthest_point.py
+python stage_02_log_clustering/streaming_clustering.py
+python stage_02_log_clustering/threshold_experiment.py
 python -m unittest discover -s tests -v
 ```
 
