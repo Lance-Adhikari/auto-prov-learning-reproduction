@@ -1,0 +1,6 @@
+Sid = 9234
+Sname = C:\Program Files\Microsoft\Word\WINWORD.EXE
+Did = 6612
+Dname = C:\Users\Lance\Documents\essay.docx
+Itype = ReadData
+time = 09:15:27

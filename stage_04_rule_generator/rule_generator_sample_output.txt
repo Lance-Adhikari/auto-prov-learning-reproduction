@@ -1,0 +1,3 @@
+RDB = {'windows_file_access_4663': {'Sid': '^Process ID:[ \\t]*(\\d+)[ \\t]*$', 'Sname': '^Process Name:[ \\t]*([^\\r\\n]+)$', 'Did': '^Object ID:[ \\t]*(\\d+)[ \\t]*$', 'Dname': '^Object Name:[ \\t]*([^\\r\\n]+)$', 'Itype': '^Accesses:[ \\t]*(\\w+)[ \\t]*$', 'time': '^Time:[ \\t]*(\\d{2}:\\d{2}:\\d{2})[ \\t]*$'}}
+Record 1 = {'Sid': '8888', 'Stype': 'process', 'Sname': 'C:\\Windows\\System32\\notepad.exe', 'Did': '7712', 'Dtype': 'file', 'Dname': 'C:\\Users\\Lance\\Documents\\homework.txt', 'Itype': 'WRITE', 'time': '18:22:10'}
+Record 2 = {'Sid': '9234', 'Stype': 'process', 'Sname': 'C:\\Program Files\\Microsoft\\Word\\WINWORD.EXE', 'Did': '6612', 'Dtype': 'file', 'Dname': 'C:\\Users\\Lance\\Documents\\essay.docx', 'Itype': 'READ', 'time': '09:15:27'}

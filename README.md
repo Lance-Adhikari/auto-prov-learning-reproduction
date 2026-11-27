@@ -1,6 +1,6 @@
 # Auto-Prov Learning and Reproduction
 
-A staged exploration of Auto-Prov, a framework for turning system logs into provenance graphs and interpreting suspicious activity. This project currently contains architecture notes and NumPy examples for comparing, sampling, and clustering vectors. It is not a full reproduction of the research system.
+A staged exploration of Auto-Prov, a framework for turning system logs into provenance graphs and interpreting suspicious activity. This project contains architecture notes, vector experiments, and examples of provenance extraction and reusable regex rules. It is not a full reproduction of the research system.
 
 ## Contents
 
@@ -12,7 +12,10 @@ A staged exploration of Auto-Prov, a framework for turning system logs into prov
 
 - [Simplified streaming clustering](stage_02_log_clustering/streaming_clustering.py): Groups incoming vectors by distance to cluster centers. Includes a [threshold experiment](stage_02_log_clustering/threshold_experiment_results.md).
 
-The vectors are synthetic, not real log embeddings. The clustering example is not DBStream. RoBERTa encoding and threat detection are not implemented. The next planned stage is the Candidate Provenance Extractor (CPE).
+- [Candidate provenance extraction](stage_03_candidate_provenance_extractor/notes.md): Builds structured records from sample logs.
+- [Reusable extraction rules](stage_04_rule_generator/notes.md): Applies regex rules to further sample logs.
+
+The vectors are synthetic, not real log embeddings. The clustering example is not DBStream. RoBERTa encoding and threat detection are not implemented. Provenance extraction uses deterministic parsing and supplied votes; regex rules are hand-written. The next planned stage is functional node features.
 
 ## Run
 
@@ -24,6 +27,9 @@ python stage_02_log_clustering/embeddings_cosine_similarity.py
 python stage_02_log_clustering/greedy_farthest_point.py
 python stage_02_log_clustering/streaming_clustering.py
 python stage_02_log_clustering/threshold_experiment.py
+python stage_03_candidate_provenance_extractor/cpe_pdb.py
+python stage_04_rule_generator/rule_generator.py
+python stage_04_rule_generator/regex_example.py
 python -m unittest discover -s tests -v
 ```
 

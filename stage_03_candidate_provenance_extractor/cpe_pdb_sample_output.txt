@@ -1,0 +1,4 @@
+V_l = {'7210': 'process', '5542': 'file'}
+N_l = {'7210': 'C:\\Windows\\System32\\powershell.exe', '5542': 'C:\\Users\\Lance\\Documents\\config.txt'}
+E_l = {'Sid': '7210', 'Did': '5542', 'Itype': 'WRITE', 'time': '14:42:31'}
+PDB = {'log_001': [{'Sid': '7210', 'Stype': 'process', 'Sname': 'C:\\Windows\\System32\\powershell.exe', 'Did': '5542', 'Dtype': 'file', 'Dname': 'C:\\Users\\Lance\\Documents\\config.txt', 'Itype': 'WRITE', 'time': '14:42:31'}]}
